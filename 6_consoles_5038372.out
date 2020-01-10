@@ -1,0 +1,91 @@
+Loaded module: studio/12u6
+Creating experiment database 6_consoles.5038372.er (Process ID: 1627) ...
+ 23437.500   2334.012 # matmult_blk 120
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-46>
+Subject: Job 5038372: <6_consoles> in cluster <dcc> Done
+
+Job <6_consoles> was submitted from host <n-62-30-5> by user <s164211> in cluster <dcc> at Thu Jan  9 11:24:27 2020
+Job was executed on host(s) <n-62-21-46>, in queue <hpcintro>, as user <s164211> in cluster <dcc> at Thu Jan  9 11:24:27 2020
+</zhome/e3/7/118026> was used as the home directory.
+</zhome/e3/7/118026/Desktop/gits/HPC> was used as the working directory.
+Started at Thu Jan  9 11:24:27 2020
+Terminated at Thu Jan  9 11:24:40 2020
+Results reported at Thu Jan  9 11:24:40 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+# 02614 - High-Performance Computing, January 2020
+# 
+# batch script to run collect on a decidated server in the hpcintro
+# queue
+#
+# Author: Bernd Dammann <bd@cc.dtu.dk>
+#
+#BSUB -J 6_consoles
+#BSUB -o 6_consoles_%J.out
+#BSUB -q hpcintro
+#BSUB -n 1
+#BSUB -R "rusage[mem=148]"
+#BSUB -W 10
+
+module load studio
+
+# define the driver name to use
+# valid values: matmult_c.studio, matmult_f.studio, matmult_c.gcc or
+# matmult_f.gcc
+#
+EXECUTABLE=matmult_c.gcc
+
+# define the mkn values in the MKN variable
+#
+MKN="1000 1000 1000"
+
+# define the permutation type in PERM
+#
+PERM="blk"
+
+# uncomment and set a reasonable BLKSIZE for the blk version
+#
+BLKSIZE=120
+
+# define the max no. of iterations the driver should use - adjust to
+# get a reasonable run time.  You can get an estimate by trying this
+# on the command line, i.e. "MFLOPS_MAX_IT=10 ./matmult_...." for the
+# problem size you want to analyze.
+#
+export MFLOPS_MAX_IT=10
+export MATMULT_COMPARE=0
+
+# experiment name 
+#
+JID=${LSB_JOBID}
+EXPOUT="$LSB_JOBNAME.${JID}.er"
+
+# uncomment the HWCOUNT line, if you want to use hardware counters
+# define an option string for the harwdware counters (see output of
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9.00 sec.
+    Max Memory :                                 47 MB
+    Average Memory :                             15.67 MB
+    Total Requested Memory :                     148.00 MB
+    Delta Memory :                               101.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   13 sec.
+    Turnaround time :                            13 sec.
+
+The output (if any) is above this job summary.
+

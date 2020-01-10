@@ -1,0 +1,283 @@
+ 24576.000    413.491 # matmult_blk 2
+ 24576.000   1191.009 # matmult_blk 4
+ 24576.000   1519.825 # matmult_blk 6
+ 24576.000   1811.015 # matmult_blk 8
+ 24576.000   2009.457 # matmult_blk 10
+ 24576.000   2000.058 # matmult_blk 12
+ 24576.000   2175.370 # matmult_blk 14
+ 24576.000   2325.424 # matmult_blk 16
+ 24576.000   2417.888 # matmult_blk 18
+ 24576.000   2468.090 # matmult_blk 20
+ 24576.000   2549.624 # matmult_blk 22
+ 24576.000   2605.294 # matmult_blk 24
+ 24576.000   3824.406 # matmult_blk 26
+ 24576.000   3492.250 # matmult_blk 28
+ 24576.000   3732.369 # matmult_blk 30
+ 24576.000   3523.794 # matmult_blk 32
+ 24576.000   3495.345 # matmult_blk 34
+ 24576.000   3157.252 # matmult_blk 36
+ 24576.000   3455.903 # matmult_blk 38
+ 24576.000   2877.673 # matmult_blk 40
+ 24576.000   3330.252 # matmult_blk 42
+ 24576.000   3203.837 # matmult_blk 44
+ 24576.000   3558.397 # matmult_blk 46
+ 24576.000   3212.578 # matmult_blk 48
+ 24576.000   3557.486 # matmult_blk 50
+ 24576.000   3376.546 # matmult_blk 52
+ 24576.000   3837.395 # matmult_blk 54
+ 24576.000   3344.022 # matmult_blk 56
+ 24576.000   4012.750 # matmult_blk 58
+ 24576.000   3469.202 # matmult_blk 60
+ 24576.000   3738.360 # matmult_blk 62
+ 24576.000   3455.572 # matmult_blk 64
+ 24576.000   4454.504 # matmult_blk 66
+ 24576.000   3603.840 # matmult_blk 68
+ 24576.000   4093.513 # matmult_blk 70
+ 24576.000   3631.190 # matmult_blk 72
+ 24576.000   4323.043 # matmult_blk 74
+ 24576.000   3767.791 # matmult_blk 76
+ 24576.000   4319.416 # matmult_blk 78
+ 24576.000   3808.747 # matmult_blk 80
+ 24576.000   3982.896 # matmult_blk 82
+ 24576.000   3789.391 # matmult_blk 84
+ 24576.000   4587.581 # matmult_blk 86
+ 24576.000   3821.179 # matmult_blk 88
+ 24576.000   4472.555 # matmult_blk 90
+ 24576.000   3739.803 # matmult_blk 92
+ 24576.000   4199.869 # matmult_blk 94
+ 24576.000   3767.752 # matmult_blk 96
+ 24576.000   4101.601 # matmult_blk 98
+ 24576.000   3683.743 # matmult_blk 100
+ 24576.000   4026.340 # matmult_blk 102
+ 24576.000   3760.027 # matmult_blk 104
+ 24576.000   4359.153 # matmult_blk 106
+ 24576.000   3724.070 # matmult_blk 108
+ 24576.000   4323.003 # matmult_blk 110
+ 24576.000   3663.968 # matmult_blk 112
+ 24576.000   4247.247 # matmult_blk 114
+ 24576.000   3837.864 # matmult_blk 116
+ 24576.000   4021.936 # matmult_blk 118
+ 24576.000   3765.761 # matmult_blk 120
+ 24576.000   3946.185 # matmult_blk 122
+ 24576.000   3728.472 # matmult_blk 124
+ 24576.000   3977.780 # matmult_blk 126
+ 24576.000   4057.315 # matmult_blk 128
+ 24576.000   4743.277 # matmult_blk 130
+ 24576.000   4067.945 # matmult_blk 132
+ 24576.000   4706.628 # matmult_blk 134
+ 24576.000   3876.895 # matmult_blk 136
+ 24576.000   4676.954 # matmult_blk 138
+ 24576.000   3797.710 # matmult_blk 140
+ 24576.000   4672.232 # matmult_blk 142
+ 24576.000   3796.097 # matmult_blk 144
+ 24576.000   4663.308 # matmult_blk 146
+ 24576.000   4095.053 # matmult_blk 148
+ 24576.000   4601.448 # matmult_blk 150
+ 24576.000   4127.430 # matmult_blk 152
+ 24576.000   4571.871 # matmult_blk 154
+ 24576.000   3918.667 # matmult_blk 156
+ 24576.000   4381.188 # matmult_blk 158
+ 24576.000   3887.185 # matmult_blk 160
+ 24576.000   4412.332 # matmult_blk 162
+ 24576.000   3877.736 # matmult_blk 164
+ 24576.000   4399.748 # matmult_blk 166
+ 24576.000   3895.277 # matmult_blk 168
+ 24576.000   4393.542 # matmult_blk 170
+ 24576.000   4429.580 # matmult_blk 172
+ 24576.000   4846.540 # matmult_blk 174
+ 24576.000   4466.481 # matmult_blk 176
+ 24576.000   4778.655 # matmult_blk 178
+ 24576.000   4385.885 # matmult_blk 180
+ 24576.000   4809.150 # matmult_blk 182
+ 24576.000   4437.477 # matmult_blk 184
+ 24576.000   4724.193 # matmult_blk 186
+ 24576.000   4193.019 # matmult_blk 188
+ 24576.000   4757.799 # matmult_blk 190
+ 24576.000   4161.246 # matmult_blk 192
+ 24576.000   4768.796 # matmult_blk 194
+ 24576.000   4102.379 # matmult_blk 196
+ 24576.000   4772.587 # matmult_blk 198
+ 24576.000   4090.027 # matmult_blk 200
+ 24576.000   4681.698 # matmult_blk 202
+ 24576.000   4051.015 # matmult_blk 204
+ 24576.000   4694.880 # matmult_blk 206
+ 24576.000   4597.764 # matmult_blk 208
+ 24576.000   4687.445 # matmult_blk 210
+ 24576.000   4464.829 # matmult_blk 212
+ 24576.000   4697.685 # matmult_blk 214
+ 24576.000   4452.856 # matmult_blk 216
+ 24576.000   4715.383 # matmult_blk 218
+ 24576.000   4433.170 # matmult_blk 220
+ 24576.000   4715.059 # matmult_blk 222
+ 24576.000   4501.964 # matmult_blk 224
+ 24576.000   4843.266 # matmult_blk 226
+ 24576.000   4496.695 # matmult_blk 228
+ 24576.000   4825.599 # matmult_blk 230
+ 24576.000   4343.591 # matmult_blk 232
+ 24576.000   4593.827 # matmult_blk 234
+ 24576.000   4248.676 # matmult_blk 236
+ 24576.000   4619.621 # matmult_blk 238
+ 24576.000   4261.201 # matmult_blk 240
+ 24576.000   4604.719 # matmult_blk 242
+ 24576.000   4215.237 # matmult_blk 244
+ 24576.000   4600.278 # matmult_blk 246
+ 24576.000   4191.685 # matmult_blk 248
+ 24576.000   4545.198 # matmult_blk 250
+ 24576.000   4168.434 # matmult_blk 252
+ 24576.000   4481.144 # matmult_blk 254
+ 24576.000   4903.124 # matmult_blk 256
+ 24576.000   5361.981 # matmult_blk 258
+ 24576.000   4840.485 # matmult_blk 260
+ 24576.000   5348.239 # matmult_blk 262
+ 24576.000   4883.191 # matmult_blk 264
+ 24576.000   5335.957 # matmult_blk 266
+ 24576.000   4835.834 # matmult_blk 268
+ 24576.000   5324.662 # matmult_blk 270
+ 24576.000   4832.201 # matmult_blk 272
+ 24576.000   5242.522 # matmult_blk 274
+ 24576.000   4834.682 # matmult_blk 276
+ 24576.000   5294.806 # matmult_blk 278
+ 24576.000   4793.816 # matmult_blk 280
+ 24576.000   5322.477 # matmult_blk 282
+ 24576.000   4787.686 # matmult_blk 284
+ 24576.000   5268.325 # matmult_blk 286
+ 24576.000   4737.889 # matmult_blk 288
+ 24576.000   5333.039 # matmult_blk 290
+ 24576.000   4742.340 # matmult_blk 292
+ 24576.000   5332.801 # matmult_blk 294
+ 24576.000   4695.476 # matmult_blk 296
+ 24576.000   5308.659 # matmult_blk 298
+ 24576.000   4695.351 # matmult_blk 300
+ 24576.000   5278.071 # matmult_blk 302
+ 24576.000   4716.964 # matmult_blk 304
+ 24576.000   5264.454 # matmult_blk 306
+ 24576.000   4676.389 # matmult_blk 308
+ 24576.000   5220.875 # matmult_blk 310
+ 24576.000   4421.500 # matmult_blk 312
+ 24576.000   5224.462 # matmult_blk 314
+ 24576.000   4387.477 # matmult_blk 316
+ 24576.000   3741.731 # matmult_blk 318
+ 24576.000   3759.879 # matmult_blk 320
+ 24576.000   3776.103 # matmult_blk 322
+ 24576.000   3787.504 # matmult_blk 324
+ 24576.000   3800.730 # matmult_blk 326
+ 24576.000   3757.642 # matmult_blk 328
+ 24576.000   3814.094 # matmult_blk 330
+ 24576.000   3828.436 # matmult_blk 332
+ 24576.000   3841.605 # matmult_blk 334
+ 24576.000   3820.408 # matmult_blk 336
+ 24576.000   3863.822 # matmult_blk 338
+ 24576.000   3860.015 # matmult_blk 340
+ 24576.000   3914.941 # matmult_blk 342
+ 24576.000   3894.541 # matmult_blk 344
+ 24576.000   3912.876 # matmult_blk 346
+ 24576.000   3899.832 # matmult_blk 348
+ 24576.000   3908.093 # matmult_blk 350
+ 24576.000   3898.811 # matmult_blk 352
+ 24576.000   3909.491 # matmult_blk 354
+ 24576.000   3878.130 # matmult_blk 356
+ 24576.000   3905.668 # matmult_blk 358
+ 24576.000   3898.524 # matmult_blk 360
+ 24576.000   3913.647 # matmult_blk 362
+ 24576.000   3905.875 # matmult_blk 364
+ 24576.000   3891.027 # matmult_blk 366
+ 24576.000   3866.677 # matmult_blk 368
+ 24576.000   3893.398 # matmult_blk 370
+ 24576.000   3883.156 # matmult_blk 372
+ 24576.000   3892.923 # matmult_blk 374
+ 24576.000   3879.373 # matmult_blk 376
+ 24576.000   3891.103 # matmult_blk 378
+ 24576.000   3877.406 # matmult_blk 380
+ 24576.000   3849.050 # matmult_blk 382
+ 24576.000   3875.141 # matmult_blk 384
+ 24576.000   3894.027 # matmult_blk 386
+ 24576.000   3886.233 # matmult_blk 388
+ 24576.000   3899.526 # matmult_blk 390
+ 24576.000   3871.579 # matmult_blk 392
+ 24576.000   3897.819 # matmult_blk 394
+ 24576.000   3741.139 # matmult_blk 396
+ 24576.000   3897.558 # matmult_blk 398
+ 24576.000   3880.337 # matmult_blk 400
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-44>
+Subject: Job 5045048: <8_monitors_blk_many_optim> in cluster <dcc> Done
+
+Job <8_monitors_blk_many_optim> was submitted from host <n-62-30-5> by user <s164211> in cluster <dcc> at Fri Jan 10 09:11:53 2020
+Job was executed on host(s) <n-62-21-44>, in queue <hpcintro>, as user <s164211> in cluster <dcc> at Fri Jan 10 09:11:55 2020
+</zhome/e3/7/118026> was used as the home directory.
+</zhome/e3/7/118026/Desktop/gits/HPC> was used as the working directory.
+Started at Fri Jan 10 09:11:55 2020
+Terminated at Fri Jan 10 09:31:02 2020
+Results reported at Fri Jan 10 09:31:02 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J 8_monitors_blk_many_optim
+#BSUB -o 8_monitors_blk_many_optim%J.out
+#BSUB -q hpcintro
+#BSUB -n 1
+#BSUB -R "rusage[mem=512]"
+#BSUB -W 60
+
+EXECUTABLE=matmult_c.gcc
+
+# "32 64 128 256 512 1024 2048"
+SIZES="1024"
+
+PERM="blk"
+
+# "4 8 16 32 64 128 256 512"
+BLKSIZE=128
+
+export MFLOPS_MAX_IT=10
+export MATMULT_COMPARE=0
+
+# ./$EXECUTABLE $PERM $SIZES $SIZES $SIZES $BLKSIZE
+
+# for B in $BLKSIZE
+# do
+#     ./$EXECUTABLE $PERM $SIZES $SIZES $SIZES $B
+# done
+
+for B in {2..400..2}
+do
+    ./$EXECUTABLE $PERM $SIZES $SIZES $SIZES $B
+done
+
+# for S in $SIZES
+# do
+#     ./$EXECUTABLE $PERM $S $S $S $BLKSIZE
+# done
+
+# PERMS="mnk mkn kmn knm nkm nmk"
+
+# for P in $PERMS
+# do
+#     for S in $SIZES
+#     do
+#         ./$EXECUTABLE $P $S $S $S $BLKSIZE
+#     done
+# done
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1144.35 sec.
+    Max Memory :                                 28 MB
+    Average Memory :                             26.67 MB
+    Total Requested Memory :                     512.00 MB
+    Delta Memory :                               484.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   1147 sec.
+    Turnaround time :                            1149 sec.
+
+The output (if any) is above this job summary.
+

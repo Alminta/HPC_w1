@@ -1,9 +1,7 @@
 #include <cblas.h>
-
-
+#include <math.h>
+/*
 void matmult_nat(int m, int n, int k, double **A, double **B, double **C) {
-    
-
     int i, j, h;
     double tmp;
 
@@ -14,6 +12,24 @@ void matmult_nat(int m, int n, int k, double **A, double **B, double **C) {
                 tmp += A[i][h] * B[h][j];
             }
             C[i][j] = tmp;
+        }
+    }
+} */
+
+void matmult_nat(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
+    int i, j, h;
+
+    for(j = 0; j < n; j++){
+        for(i = 0; i < m; i++){
+            C[i][j] = 0;
+        }
+    }
+
+    for(i = 0; i < m; i++){
+        for(j = 0; j < n; j++){
+            for(h = 0; h < k; h++){
+                C[i][j] += A[i][h] * B[h][j];
+            }
         }
     }
 }
@@ -22,7 +38,7 @@ void matmult_lib(int m, int n, int k, double **A, double **B, double **C) {
     cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, m, n, k, 1, *A, k, *B, n, 0, *C, n);
 }
 
-void matmult_mnk(int m, int n, int k, double **A, double **B, double **C) {
+void matmult_mnk(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
     int i, j, h;
     double tmp;
 
@@ -38,7 +54,7 @@ void matmult_mnk(int m, int n, int k, double **A, double **B, double **C) {
 }
 
 
-void matmult_nmk(int m, int n, int k, double **A, double **B, double **C) {
+void matmult_nmk(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
     int i, j, h;
     double tmp;
 
@@ -53,7 +69,7 @@ void matmult_nmk(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-void matmult_knm(int m, int n, int k, double **A, double **B, double **C) {
+void matmult_knm(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
     int i, j, h;
 
     for(j = 0; j < n; j++){
@@ -71,7 +87,7 @@ void matmult_knm(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-void matmult_kmn(int m, int n, int k, double **A, double **B, double **C) {
+void matmult_kmn(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
     int i, j, h;
 
     for(j = 0; j < n; j++){
@@ -89,7 +105,7 @@ void matmult_kmn(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-void matmult_mkn(int m, int n, int k, double **A, double **B, double **C) {
+void matmult_mkn(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
     int i, j, h;
 
     for(j = 0; j < n; j++){
@@ -107,7 +123,7 @@ void matmult_mkn(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-void matmult_nkm(int m, int n, int k, double **A, double **B, double **C) {
+void matmult_nkm(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C) {
     int i, j, h;
 
     for(j = 0; j < n; j++){
@@ -125,7 +141,7 @@ void matmult_nkm(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-void matmult_blk(int m, int n, int k, double **A, double **B, double **C, int blk) {
+void matmult_blk(int m, int n, int k, double **restrict A, double **restrict B, double **restrict C, int blk) {
     int i, j, h, x, y;
 
     for(j = 0; j < n; j++){
@@ -140,23 +156,28 @@ void matmult_blk(int m, int n, int k, double **A, double **B, double **C, int bl
     int superi, superj, superh;
 
     // i er m og j er n - mos 2020
+    int q1, q2, q3;
+    // loop over blocks
+    for(blki = 0; blki < m; blki+=blk){
+        for(blkh = 0; blkh < k; blkh+=blk){
+            for(blkj = 0; blkj < n; blkj+=blk){
+                // blki = blkAm*blk;
+                // blkj = blkBn*blk;
+                // blkh = blkk*blk;
 
-    for(blkk = 0; blkk < itersk; blkk++){ // loop over blocks
-        for(blkAm = 0; blkAm < itersm; blkAm++){
-            for(blkBn = 0; blkBn < itersn; blkBn++){
-                blki = blkAm*blk;
-                blkj = blkBn*blk;
-                blkh = blkk*blk;
-
-                for(h = 0; (h < blk && h + blkh < k); h++){
-                    superh = h + blkh;
-                    for(i = 0; (i < blk && i + blki < m); i++){
-                        superi = i + blki;
-                        for(j = 0; (j < blk && j + blkj < n); j++){ // loop over block
+                // loop over block
+                q1 = fmin(blk,m-blki);
+                q2 = fmin(blk,k-blkh);
+                q3 = fmin(blk,n-blkj);
+                for(i = 0; i < q1; i++){
+                    // superi = i + blki;
+                    for(h = 0; h < q2; h++){
+                        // superh = h + blkh;
+                        for(j = 0; j < q3; j++){
                             // superj = j + blkj;
                             // C[superi][superj] += A[superi][h + blkh] * B[h+blkh][superj];
                             // C[i + blki][superj] += A[i + blki][superh] * B[superh][superj];
-                            C[superi][j + blkj] += A[superi][superh] * B[superh][j + blkj];
+                            C[i + blki][j + blkj] += A[i + blki][h + blkh] * B[h + blkh][j + blkj];
                         }
                     }
                 }

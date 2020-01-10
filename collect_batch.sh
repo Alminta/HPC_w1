@@ -6,12 +6,12 @@
 #
 # Author: Bernd Dammann <bd@cc.dtu.dk>
 #
-#BSUB -J 6_consoles
-#BSUB -o 6_consoles_%J.out
+#BSUB -J 9_monitors_per=optim=actually_xrestrict2
+#BSUB -o 9_monitors_per=optim=actually_xrestrict2_%J.out
 #BSUB -q hpcintro
 #BSUB -n 1
-#BSUB -R "rusage[mem=128]"
-#BSUB -W 10
+#BSUB -R "rusage[mem=148]"
+#BSUB -W 20
 
 module load studio
 
@@ -23,15 +23,15 @@ EXECUTABLE=matmult_c.gcc
 
 # define the mkn values in the MKN variable
 #
-MKN="1000 1000 1000"
+MKN="1024 1024 1024"
 
 # define the permutation type in PERM
 #
-PERM="blk"
+PERM="per"
 
 # uncomment and set a reasonable BLKSIZE for the blk version
 #
-BLKSIZE=32
+BLKSIZE=16
 
 # define the max no. of iterations the driver should use - adjust to
 # get a reasonable run time.  You can get an estimate by trying this
@@ -53,13 +53,23 @@ EXPOUT="$LSB_JOBNAME.${JID}.er"
 #
 # the example below is for L1 hits, L1 misses, L2 hits, L2 misses
 #
-HWCOUNT="-h dch,on,dcm,on,l2h,on,l2m,on"
+HWCOUNT="-h dcm,on,l2m,on,l3m,on"
 
 # start the collect command with the above settings
 
-counter=20
-while [ $counter -le 30 ]
-do
-    collect -o $EXPOUT $HWCOUNT ./$EXECUTABLE $PERM $MKN $counter
-    ((counter++))
-done
+collect -o $EXPOUT $HWCOUNT ./$EXECUTABLE $PERM $MKN $BLKSIZE
+# collect -o $EXPOUT $HWCOUNT ./$EXECUTABLE $PERM $MKN $BLKSIZE
+
+# counter=1
+# while [ $counter -le 200 ]
+# do
+#     collect -o $EXPOUT $HWCOUNT ./$EXECUTABLE $PERM $MKN $counter
+#     ((counter++))
+# done
+
+# array=( 1 2 4 8 16 32 64 128 256 )
+# for i in "${array[@]}"
+# do
+#     collect -o $EXPOUT $HWCOUNT ./$EXECUTABLE $PERM $MKN $i
+#     ((counter++))
+# done
