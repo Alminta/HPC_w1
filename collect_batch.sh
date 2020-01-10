@@ -6,8 +6,8 @@
 #
 # Author: Bernd Dammann <bd@cc.dtu.dk>
 #
-#BSUB -J 9_monitors_per=optim=actually_xrestrict2
-#BSUB -o 9_monitors_per=optim=actually_xrestrict2_%J.out
+#BSUB -J 95_monitors_mkn_2048
+#BSUB -o 95_monitors_mkn_2048_%J.out
 #BSUB -q hpcintro
 #BSUB -n 1
 #BSUB -R "rusage[mem=148]"
@@ -23,15 +23,15 @@ EXECUTABLE=matmult_c.gcc
 
 # define the mkn values in the MKN variable
 #
-MKN="1024 1024 1024"
+MKN="2048 2048 2048"
 
 # define the permutation type in PERM
 #
-PERM="per"
+PERM="mkn"
 
 # uncomment and set a reasonable BLKSIZE for the blk version
 #
-BLKSIZE=16
+BLKSIZE=302
 
 # define the max no. of iterations the driver should use - adjust to
 # get a reasonable run time.  You can get an estimate by trying this
